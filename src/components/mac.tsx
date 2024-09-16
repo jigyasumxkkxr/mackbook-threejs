@@ -23,7 +23,7 @@ export function MacContainer () {
 
     let data = useScroll()
 
-    useFrame((state, delta) => {
+    useFrame(() => {
         //@ts-ignore
         meshes["screen"].rotation.x = THREE.MathUtils.degToRad(180 - data.offset*90)
     })
