@@ -1,0 +1,47 @@
+html, body{
+    height:100%;
+    width:100%
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+/* styles.css */
+
+/* styles.css */
+
+.masked {
+    position: relative;
+    display: inline-block;
+    font-size: 7rem; /* Retain the original font size */
+    text-align: center;
+    color: transparent; /* Hide the text color for the effect */
+    background: url('https://images.unsplash.com/photo-1618397746666-63405ce5d015?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* For other browsers */
+    position: relative;
+}
+
+.masked::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1618397746666-63405ce5d015?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* For other browsers */
+    color: transparent; /* Hide the text color for the effect */
+    filter: blur(20px); /* Adjust the blur for the glow effect */
+    z-index: -1; /* Place it behind the main text */
+    overflow: hidden; /* Ensure no overflow from the glow */
+    opacity: 0.9; /* Adjust opacity for desired effect */
+}
+
+  
